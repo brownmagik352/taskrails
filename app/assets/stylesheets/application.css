@@ -9,5 +9,22 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+ *= require_tree 
  */
+
+#navbar {
+	background-color: black;
+	height: 50px;
+	width: 100%;
+	color:red;
+	position: fixed;
+	top: 0;
+	text-align: center;
+	border: 5px yellow solid;
+	border-radius: 10px;
+}
+
+#content {
+	position: absolute;
+	margin-top: 70px;
+}
