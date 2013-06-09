@@ -6,10 +6,6 @@ class TasksController < ApplicationController
 	def new
 		@task = Task.new
 		
-		respond_to do |format|
-			format.html # new.html.erb
-			format.json { render :json => @task }
-		end
 	end
 
 	def create
@@ -21,5 +17,15 @@ class TasksController < ApplicationController
 
 	def show
 		@task = Task.find(params[:id])
+	end
+	
+	def edit
+		@task = Task.find(params[:id])
+	end
+
+	def update
+		@task = Task.find(params[:id])
+		@task.update_attributes(params[:task])
+		redirect_to tasks_path
 	end
 end

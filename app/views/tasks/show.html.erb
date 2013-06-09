@@ -2,5 +2,6 @@
 
 <p>This task was created on <%= @task.created_at.strftime("%A, %B %d, %Y, at %l:%M%p")%>. </p>
 
-
+<%= link_to 'Edit this Task', edit_task_path %>
+<br />
 <%= link_to 'All Tasks', tasks_path %>
