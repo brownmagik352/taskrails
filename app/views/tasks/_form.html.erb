@@ -1,3 +1,22 @@
+<div id="error-messages">
+
+	<% if @task.errors.any? %>
+		<div class="error-title">
+			<h2> There are <%= pluralize @task.errors.count, "error" %> errors.</h2>
+		</div>
+
+		<div class="error-message">
+			<ul>
+				<% @task.errors.full_messages.each do |m| %>
+					<li> <%=m%> </li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+</div>
+
+
 <%= form_for(@task) do |f| %>
 
 	<div class='field'>
