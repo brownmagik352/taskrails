@@ -4,6 +4,6 @@
 
 <%= link_to 'Edit this Task', edit_task_path %>
 <br />
-<%= link_to 'Delete this Task', @task, method: :delete %> 
+<%= link_to 'Delete this Task', @task, method: :delete, :confirm => "Are you sure?"%> 
 <br />
 <%= link_to 'All Tasks', tasks_path %>

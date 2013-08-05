@@ -13,10 +13,10 @@
  */
 
 #navbar {
-	background-color: black;
+	background-color: blue;
 	height: 50px;
 	width: 100%;
-	color:red;
+	color: white;
 	position: fixed;
 	top: 0;
 	text-align: center;
@@ -25,6 +25,7 @@
 }
 
 #content {
+
 	position: absolute;
 	top: 55px;
 }
