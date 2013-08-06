@@ -1,6 +1,9 @@
 Taskrails::Application.routes.draw do
 	resources :tasks
 	root :to => 'tasks#index'
+  match '/all' => redirect('/tasks')
+  match '/new' => redirect('/tasks/new')
+  match '/google' => redirect('http://www.google.com')
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
