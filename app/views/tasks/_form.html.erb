@@ -24,6 +24,11 @@
 		<%= f.text_field :title %>
 	</div>
 
+	<div class='field'>
+		<%= f.label :urgency %>
+		<%= f.select(:urgency, [['1',1], ['2',2], ['3',3], ['4',4], ['5',5]]) %>
+	</div>
+
 	<div class='actions'>
 		<%= f.submit %>
 	</div>

@@ -3,7 +3,7 @@
 <ul>
 	<% @tasks.each do |t| %>
 		<li> 
-			<td> <%= link_to t.title, t %> | </td>
+			<td> <%= link_to t.title, t %>-- <%=t.urgency %> | </td>
 			<td> <%= link_to 'Edit', edit_task_path(t) %> | </td>
 			<td> <%=link_to 'Delete', t, method: :delete, :confirm => "Are you sure?" %></td>
 		</li>
