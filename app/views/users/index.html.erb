@@ -6,10 +6,12 @@
 			<td> <%= u.name %> | </td>
 			<td> <%= u.email %> | </td>
 			<% u.tasks.each do |t| %>
-				<td> <%= t.title %> </td>
+				<td> <%= t.title %> | </td>
 			<% end %>
 
 		</li>
 	<% end %>
 
 </ul>
+
+<%= link_to 'Add new user', new_user_path %>
