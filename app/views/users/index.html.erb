@@ -3,8 +3,12 @@
 <ul>
 	<% @users.each do |u| %>
 		<li>
-			<td> <%= u.name %> </td>
-			<td> <%= u.email %> </td>
+			<td> <%= u.name %> | </td>
+			<td> <%= u.email %> | </td>
+			<% u.tasks.each do |t| %>
+				<td> <%= t.title %> </td>
+			<% end %>
+
 		</li>
 	<% end %>
 
