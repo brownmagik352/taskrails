@@ -5,13 +5,18 @@
 		<li>
 			<td> <%= u.name %> | </td>
 			<td> <%= u.email %> | </td>
-			<% u.tasks.each do |t| %>
-				<td> <%= t.title %> | </td>
-			<% end %>
+			<% if u.tasks.empty? %>
+				<td> no tasks currently </td>
+			<% else %>
+				<% u.tasks.each do |t| %>
+					<td> <%= t.title %> | </td>
+				<% end %>
+			<% end %> 
 
 		</li>
 	<% end %>
 
 </ul>
 
-<%= link_to 'Add new user', new_user_path %>
+<%= link_to 'Add new user', new_user_path %> <br />
+<%= link_to 'Tasks', tasks_path %>

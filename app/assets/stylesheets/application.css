@@ -13,15 +13,16 @@
  */
 
 #navbar {
-	background-color: blue;
+	top: 0;
+	text-align: center;
+	/*background-color: blue;
 	height: 50px;
 	width: 100%;
 	color: white;
 	position: fixed;
-	top: 0;
-	text-align: center;
 	border: 5px yellow solid;
-	border-radius: 10px;
+	border-radius: 10px; 
+	*/
 }
 
 #content {
