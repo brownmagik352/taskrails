@@ -1,9 +1,14 @@
 class TasksController < ApplicationController
 
 	before_filter :get_task, :only => [:edit, :update, :show, :destroy]
+	before_filter :get_users, :only => [:edit, :new]
 
 	def get_task
 		@task = Task.find(params[:id])
+	end
+
+	def get_users
+		@users = User.all # selecting user_id in forms
 	end
 
 	def index
