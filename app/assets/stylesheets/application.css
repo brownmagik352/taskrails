@@ -30,3 +30,12 @@
 	position: absolute;
 	top: 55px;
 }
+
+
+
+a:visited {
+	color: black;
+}
+a:hover {
+	color: red;
+}

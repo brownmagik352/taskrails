@@ -1,5 +1,7 @@
-<div id="error-messages">
 <!-- WHY ARENT THESE ERRORS SHOWING???????!!!!!!! -->
+<!--
+<div id="error-messages">
+
 	<% if @task.errors.any? %>
 		<div class="error-title">
 			<h2> There are <%= pluralize @task.errors.count, "error" %> errors.</h2>
@@ -15,9 +17,9 @@
 	<% end %>
 
 </div>
+-->
 
-
-<%= form_for(@task) do |f| %>
+<%= form_for([@user, @task]) do |f| %>
 
 	<div class='field'>
 		<%= f.label :title %>
@@ -29,9 +31,6 @@
 		<%= f.select(:urgency, [['1',1], ['2',2], ['3',3], ['4',4], ['5',5]]) %>
 	</div>
 
-	<div class='field'>
-		<%= f.label :user_id %>
-		<%= f.select(:user_id, @users.collect {|u| [u.name, u.id] } ) %>
 
 	<div class='actions'>
 		<%= f.submit %>

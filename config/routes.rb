@@ -1,6 +1,8 @@
 Taskrails::Application.routes.draw do
-	resources :tasks
-  resources :users
+	#resources :tasks
+  resources :users do
+    resources :tasks
+  end
 	root :to => 'users#index'
   match '/all' => redirect('/tasks')
   match '/new' => redirect('/tasks/new')
