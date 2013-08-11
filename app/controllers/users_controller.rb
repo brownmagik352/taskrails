@@ -1,5 +1,11 @@
 class UsersController < ApplicationController
 
+	before_filter :get_user, :only => [:show, :edit, :update, :destroy]
+
+	def get_user
+		@user = User.find(params[:id])
+	end
+
 	def index
 		@users = User.all
 	end
@@ -15,9 +21,23 @@ class UsersController < ApplicationController
 	end
 
 	def show
-		@user = User.find(params[:id])
+		#@user = User.find(params[:id])
 		@tasks = @user.tasks
 	end
+
+	def edit
+	end
+
+	def update
+		@user.update_attributes(params[:user])
+		redirect_to users_path
+	end
+
+	def destroy
+		@user.destroy
+		redirect_to users_path
+	end
+
 
 
 end
