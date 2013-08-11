@@ -34,6 +34,10 @@ class UsersController < ApplicationController
 	end
 
 	def destroy
+		
+		@user.tasks.each do |t|
+			t.destroy
+		end
 		@user.destroy
 		redirect_to users_path
 	end
