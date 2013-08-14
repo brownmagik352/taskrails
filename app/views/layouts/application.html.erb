@@ -8,13 +8,15 @@
 </head>
 <body>
 
-<%= render 'layouts/header' %>
-
+<div class="navbar">
+	<%= link_to 'Welcome to Task Manager', root_path %>
+</div>
+<!--
 <% if flash[:notice] %>
 	<div id="notice"><%= flash[:notice] %> </div>
 
 <% end %> 
-
+-->
 <div id="content">
 	<%= yield %>
 </div>

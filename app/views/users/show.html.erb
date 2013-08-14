@@ -6,8 +6,8 @@
 	</ul>
 <% end %>
 
-<ul>
-	<li> <%= link_to 'New Task', new_user_task_path(@user) %></li> 
-	<li> <%= link_to "Edit This User", edit_user_path(@user) %></li> 
-	<li> <%= link_to 'All Users', users_path %> </li> 
-</ul>
+<table>
+	<td> <%= link_to 'New Task', new_user_task_path(@user) %></td> 
+	<td> <%= link_to "Edit This User", edit_user_path(@user) %></td> 
+	<td> <%= link_to 'All Users', users_path %> </td> 
+</table>

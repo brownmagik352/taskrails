@@ -12,31 +12,23 @@
  *= require_tree 
  */
 
-#navbar {
-	top: 0;
+.navbar {
+	color: green;
+	background-color: black;
 	text-align: center;
-	/*background-color: blue;
-	height: 50px;
-	width: 100%;
-	color: white;
 	position: fixed;
-	border: 5px yellow solid;
-	border-radius: 10px; 
-	*/
+	width: 100%;
+	top: 0;
+	right: 0;
+	left: 0;
 }
 
-#content {
-
-	position: absolute;
-	top: 55px;
-}
-
-#notice {
+a {
 	color: green;
 }
 
 a:visited {
-	color: black;
+	color: green;
 }
 a:hover {
 	color: red;
