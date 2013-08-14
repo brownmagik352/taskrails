@@ -12,7 +12,7 @@
  *= require_tree 
  */
 
-.navbar {
+#navbar {
 	color: green;
 	background-color: black;
 	text-align: center;
@@ -22,6 +22,22 @@
 	right: 0;
 	left: 0;
 }
+
+#notice {
+	color: red;
+	position: relative;
+}
+
+#content {
+	color: purple;
+}
+
+#footer {
+
+	color: orange; 
+	float: right;
+}
+	
 
 a {
 	color: green;
