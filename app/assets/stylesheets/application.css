@@ -31,7 +31,9 @@
 	top: 55px;
 }
 
-
+#notice {
+	color: green;
+}
 
 a:visited {
 	color: black;

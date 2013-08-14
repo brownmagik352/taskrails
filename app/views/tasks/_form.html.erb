@@ -1,5 +1,5 @@
 <!-- WHY ARENT THESE ERRORS SHOWING???????!!!!!!! -->
-<!--
+
 <div id="error-messages">
 
 	<% if @task.errors.any? %>
@@ -10,14 +10,13 @@
 		<div class="error-message">
 			<ul>
 				<% @task.errors.full_messages.each do |m| %>
-					<li> <%=m%> </li>
+					<li> <%= m %> </li>
 				<% end %>
 			</ul>
 		</div>
 	<% end %>
 
 </div>
--->
 
 <%= form_for([@user, @task]) do |f| %>
 
