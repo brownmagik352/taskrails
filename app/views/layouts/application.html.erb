@@ -1,17 +1,25 @@
 <!DOCTYPE html>
+
 <html>
+
 	<head>
 	  <title>Taskrails</title>
 	  <%= stylesheet_link_tag    "application", :media => "all" %>
 	  <%= javascript_include_tag "application" %>
 	  <%= csrf_meta_tags %>
 	</head>
+
 	<body>
 
-		<%= render 'layouts/header' %>
+		<div id="navbar">
+			<h1> Welcome to Task Manager </h1>
+			<h3> Sign in </h3>
+		</div>
 
 		<% if flash[:notice] %>
-			<div id="notice"><%= flash[:notice] %> </div>
+			<div id="notice"> 
+				<p> <%= flash[:notice] %> </p> 
+			</div>
 		<% end %> 
 
 		<div id="content">
@@ -21,4 +29,5 @@
 		<%= render 'layouts/footer' %>
 
 	</body>
+
 </html>
