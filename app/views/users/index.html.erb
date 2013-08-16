@@ -2,7 +2,8 @@
 
 <ul>
 	<% @users.each do |u| %>
-		<li> <%= link_to u.name, u %> --- <%= u.email %> 	<ul>
+		<li> <%= link_to u.name, u %> --- <%= u.email %> 	
+			<ul>
 				<% if u.tasks.empty? %>
 					<li> no tasks currently </li>
 				<% else %>

@@ -25,9 +25,13 @@ class TasksController < ApplicationController
 	def create
 		@task = Task.create(params[:task])
 		@task.user_id = params[:user_id]
-		@task.save
-		flash[:notice] = " task created successfully"
-		redirect_to new_user_task_path
+		if @task.save
+			flash[:notice] = " task created successfully"
+			redirect_to user_path(@user)
+		else
+			flash[:notice] = "failure"
+			redirect_to new_user_task_path
+		end
 	end
 
 	def show
